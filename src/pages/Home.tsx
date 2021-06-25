@@ -44,6 +44,11 @@ export function Home () {
             return;
         }
 
+        if (roomRef.val().endedAt){
+            alert('This room has already ended');
+            return;
+        }
+
         history.push(`/rooms/${roomCode}`);
     }
 
